@@ -1,6 +1,6 @@
 To run the application
 
-<pre>java ParsePDFToTxt <pdf directory> <text output directory></pre>
+<pre>java ParsePDFToTxt &lt;pdf directory&gt; &lt;text output directory&gt;</pre>
 
 Requirement:
 
