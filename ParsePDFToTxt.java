@@ -71,7 +71,10 @@ public class ParsePDFToTxt{
 				        	//System.out.println(page);
 				        	pdfStripper.setStartPage(page);
 						    pdfStripper.setEndPage(page);			    
-						    String contents = pdfStripper.getText(pdDoc); 
+						    String contents = pdfStripper.getText(pdDoc);
+						    //remove the page number of each page
+						    contents = contents.substring(0, contents.lastIndexOf(" ")) + "\r\n\r\n";
+						    
 							out.append("=====P." + page + "=====\r\n");
 							out.append(contents);
 
