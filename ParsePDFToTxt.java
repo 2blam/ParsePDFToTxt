@@ -74,6 +74,9 @@ public class ParsePDFToTxt{
 						    String contents = pdfStripper.getText(pdDoc);
 						    //remove the page number of each page
 						    contents = contents.substring(0, contents.lastIndexOf(" ")) + "\r\n\r\n";
+
+						    //remove the footer bar
+						    contents = contents.replace("_______________________________________________________________________________________________", "\r\n");
 						    
 							out.append("=====P." + page + "=====\r\n");
 							out.append(contents);
